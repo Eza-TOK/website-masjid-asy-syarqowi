@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans, "Plus Jakarta Sans", Arial, sans-serif);
+    color: #1f2a1f;
+    background: #f3f5ea;
+}
+
+.salat-container {
+    flex: 1;
+    padding: 40px 5% 35px;
+    background: #f3f5ea
+}
+
+.salat-header {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 254px;
+    padding: 18px 5% 30px;
+
+    background: linear-gradient(rgba(143, 142, 136, 1), rgba(45, 36, 36, 0.40)), url("masjid.jpeg");
+    color: #ffffff;
+}
+
+.identitas-masjid {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-masjid {
+    font-size: 36px;
+    line-height: 1;
+}
+
+.identitas-masjid h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.tombol-beranda {
+    position: absolute;
+    top: 19px;
+    right: 5%;
+
+    padding: 10px 25px;
+    border-radius: 25px;
+
+    background: #c9a812;
+    color: #3b3510;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.tombol-beranda:hover {
+    background: #e0be2a;
+    transform: scale(1.05);
+}
+
+.judul-header {
+    margin-top: 38px;
+    max-width: 700px;
+}
+
+.judul-header h1 {
+    margin: 0 0 12px;
+    font-family: var(--serif, "Fraunces", Georgia, serif);
+    font-size: clamp(26px, 3vw, 34px);
+    color: #ffffff;
+}
+
+.judul-header p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+.salat-container {
+    padding: 40px 5% 35px;
+    background: #f3f5ea;
+}
+
+.salat-content {
+    max-width: 1110px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.salat-content h2 {
+    margin: 0 0 2px;
+    font-family: var(--sans, "Plus Jakarta Sans", Arial, sans-serif);
+    font-size: 30px;
+    color: #17291b;
+}
+
+.salat-deskripsi {
+    margin: 0 10 8px;
+    font-size: 14px;
+    color: #263322;
+}
+
+.tabel-salat-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+.tabel-salat {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f7f7e0;
+    font-size: 11px;
+}
+
+.tabel-salat th {
+    background: #c9a812;
+    color: #ffffff;
+    padding: 11px 6px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+}
+
+.tabel-salat td {
+    padding: 8px 6px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #b9c4a5;
+    border-top: none;
+}
+
+.tabel-salat td:first-child {
+    background: transparent;
+    color: inherit;
+    font-weight: normal;
+}
+
+.tabel-salat tbody tr:nth-child(odd)  { background: #f7f7e0; }
+.tabel-salat tbody tr:nth-child(even) { background: #e8eed2; }
+
+.tabel-salat tbody tr:hover {
+    background: #dbe8bd;
+}
+
+.galeri-salat {
+    margin: 50px 0 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.galeri-salat img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+    border: 2px solid #b5c99a;
+
+    transition: transform 0.3s;
+}
+
+.galeri-salat img:hover {
+    transform: scale(1.02);
+}
+
+
+.footer-salat {
+    background: #8f8e88;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+}
+
+.footer-salat p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+
+    .salat-header {
+        min-height: 200px;
+        padding: 14px 4% 24px;
+    }
+
+    .judul-header {
+        margin-top: 20px;
+    }
+
+    .judul-header h1 {
+        font-size: 22px;
+    }
+
+    .judul-header p {
+        font-size: 11px;
+    }
+
+    .tombol-beranda {
+        top: 14px;
+        font-size: 12px;
+        padding: 7px 16px;
+    }
+
+    .salat-container {
+        padding: 25px 4%;
+    }
+
+    .salat-content h2 {
+        font-size: 19px;
+    }
+
+    .salat-deskripsi {
+        font-size: 12px;
+    }
+
+    .tabel-salat {
+        min-width: 560px;
+        font-size: 10px;
+    }
+
+    .galeri-salat {
+        margin-top: 30px;
+        gap: 8px;
+    }
+
+    .galeri-salat img {
+        height: 110px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-home:hover {
+    background-color: white;  /* jadi putih saat kursor di atas */
+    transform: scale(1.05);   /* membesar 5% */
+}
+.btn-home {
+    text-decoration: none;
+    background: #c9a227;
+    color: #000000;
+    padding: 9px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .galeri-salat img,
+    .tombol-beranda {
+        transition: none;
+    }
+}
