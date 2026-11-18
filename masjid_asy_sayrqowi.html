@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masjid Asy-Syarqowi – Pulutan, Salatiga</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="masjid_asy_sayrqowi.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="masjid_asy_sayrqowi.html" class="brand">Masjid Asy-Syarqowi</a>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
+        ☰
+      </button>
+
+      <ul id="menu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#jadwal">Jadwal Sholat</a></li>
+        <li><a href="#jumat">Jadwal Jumat</a></li>
+        <li><a href="#kegiatan">Kegiatan</a></li>
+        <li><a href="#sejarah">Sejarah</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#pengurus">Pengurus</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="beranda" class="hero">
+      <div class="hero-content">
+        <h1>Masjid Asy-Syarqowi</h1>
+
+        <p class="alamat">
+          Jl. Dipomenggolo RT 01 RW 02, Pulutan Lor, Kel. Pulutan,
+          Kec. Sidorejo, Kota Salatiga, Jawa Tengah
+        </p>
+
+        <p class="tagline">
+          Tempat beribadah, menuntut ilmu, dan mempererat ukhuwah Islamiyah sejak 1850.
+        </p>
+
+        <div class="hero-aksi">
+          <a href="#jadwal" class="btn btn-emas">Lihat jadwal sholat</a>
+          <a href="#sejarah" class="btn btn-garis">Kenali sejarahnya</a>
+        </div>
+      </div>
+
+      <div class="jam-kartu" aria-live="off">
+        <p id="tanggal"></p>
+        <p class="jam" id="jam">00:00:00</p>
+        <p class="berikut" id="banner-salat">Memuat waktu sholat berikutnya…</p>
+      </div>
+    </section>
+
+    <section id="jadwal" class="section">
+      <h2 class="judul">Jadwal Sholat Kota Salatiga</h2>
+      <p class="deskripsi" id="sumber-jadwal">Waktu sholat hari ini</p>
+
+      <div class="sholat-grid" id="sholat-grid">
+        <div class="sholat" data-nama="Subuh">
+          <span>Subuh</span>
+          <strong>04:09</strong>
+        </div>
+
+        <div class="sholat" data-nama="Dzuhur">
+          <span>Dzuhur</span>
+          <strong>11:39</strong>
+        </div>
+
+        <div class="sholat" data-nama="Ashar">
+          <span>Ashar</span>
+          <strong>14:52</strong>
+        </div>
+
+        <div class="sholat" data-nama="Maghrib">
+          <span>Maghrib</span>
+          <strong>17:48</strong>
+        </div>
+
+        <div class="sholat" data-nama="Isya">
+          <span>Isya</span>
+          <strong>18:59</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="jumat" class="section section-alt">
+      <h2 class="judul">Jadwal Jumat Akan Datang</h2>
+      <p class="deskripsi">Tambahkan khatib dan imam untuk sholat Jumat berikutnya.</p>
+
+      <form id="form-jumat" class="form-jumat">
+        <label>
+          Tanggal
+          <input type="date" id="jumat-tanggal" required>
+        </label>
+
+        <label>
+          Khatib
+          <input type="text" id="jumat-khatib" placeholder="Nama khatib" required>
+        </label>
+
+        <label>
+          Imam
+          <input type="text" id="jumat-imam" placeholder="Nama imam" required>
+        </label>
+
+        <button type="submit" class="btn btn-hijau">Tambah jadwal</button>
+      </form>
+
+      <ul id="daftar-jumat" class="daftar-jumat"></ul>
+
+      <div class="jumat-kosong" id="jumat-kosong">
+        <span aria-hidden="true">📄</span>
+        <p>Belum ada jadwal Jumat. Isi formulir di atas untuk menambahkan.</p>
+      </div>
+    </section>
+
+    <section id="kegiatan" class="section">
+      <h2 class="judul">Kegiatan Masjid</h2>
+      <p class="deskripsi">Berbagai kegiatan untuk memakmurkan masjid.</p>
+
+      <div class="grid-3">
+
+          <article class="kartu">
+            <div class="ikon" aria-hidden="true">📖</div>
+            <a href="pengajian.html" class="btn btn-nav w-100 py-2 mt-auto">Pengajian</a>
+          </article>
+
+        <article class="kartu">
+          <div class="ikon" aria-hidden="true">🕌</div>
+          <a href="sholat_berjamaah.html" class="btn btn-nav w-100 py-2 mt-auto">Sholat Berjamaah</a>
+        </article>
+
+        <article class="kartu">
+          <div class="ikon" aria-hidden="true">🤝</div>
+          <a href="kerjabakti.html" class="btn btn-nav w-100 py-2 mt-auto">Kerja Bakti</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="sejarah" class="section section-alt">
+      <h2 class="judul">Sejarah Singkat</h2>
+      <p class="deskripsi">Mengenal Masjid Asy-Syarqowi</p>
+
+      <div class="sejarah-box">
+        <p>
+          Masjid Asy-Syarqowi merupakan Masjid Jami yang dibangun pada tahun 1850.
+          Masjid ini beralamat di Jl. Dipomenggolo RT 01 RW 02 Pulutan Lor,
+          Kelurahan Pulutan, Kecamatan Sidorejo, Kota Salatiga, Jawa Tengah.
+          Masjid ini berdiri di atas tanah wakaf dengan luas tanah 474 m²
+          dan luas bangunan 474 m².
+        </p>
+      </div>
+    </section>
+
+    <section id="profil" class="section">
+      <h2 class="judul">Profil Masjid</h2>
+
+      <div class="grid-4 stat-grid">
+        <div class="stat">
+          <span>Tahun Berdiri</span>
+          <strong>1850</strong>
+        </div>
+
+        <div class="stat">
+          <span>Kategori</span>
+          <strong>Masjid</strong>
+        </div>
+
+        <div class="stat">
+          <span>Status Tanah</span>
+          <strong>Wakaf</strong>
+        </div>
+
+        <div class="stat">
+          <span>Luas Tanah</span>
+          <strong>474 m²</strong>
+        </div>
+
+        <div class="stat">
+          <span>Luas Bangunan</span>
+          <strong>474 m²</strong>
+        </div>
+
+        <div class="stat">
+          <span>Daya Tampung</span>
+          <strong>200</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="pengurus" class="section section-alt">
+      <h2 class="judul">Data Pengurus Masjid</h2>
+
+      <div class="grid-4 stat-grid">
+        <div class="stat">
+          <span>Pengurus</span>
+          <strong data-hitung="15">15</strong>
+          <em>orang</em>
+        </div>
+
+        <div class="stat">
+          <span>Imam</span>
+          <strong data-hitung="3">3</strong>
+          <em>orang</em>
+        </div>
+
+        <div class="stat">
+          <span>Khatib</span>
+          <strong data-hitung="9">9</strong>
+          <em>orang</em>
+        </div>
+
+        <div class="stat">
+          <span>Muazin</span>
+          <strong data-hitung="5">5</strong>
+          <em>orang</em>
+        </div>
+
+        <div class="stat">
+          <span>Remaja Masjid</span>
+          <strong data-hitung="40">40</strong>
+          <em>orang</em>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section kontak">
+      <h2 class="judul">Kontak Kami</h2>
+
+      <div class="kontak-box">
+        <p>
+          <strong>Nama</strong>
+          Masjid Asy-Syarqowi
+        </p>
+
+        <p>
+          <strong>Alamat</strong>
+          Jl. Dipomenggolo RT 01 RW 02, Pulutan Lor, Kel. Pulutan,
+          Kec. Sidorejo, Kota Salatiga, Jawa Tengah
+        </p>
+
+        <p>
+          <strong>Pengurus</strong>
+          Takmir Masjid Asy-Syarqowi
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="tahun"></span> Masjid Asy-Syarqowi. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script src="masjid_asy_sayrqowi.js"></script>
+
+</body>
+
+</html>
